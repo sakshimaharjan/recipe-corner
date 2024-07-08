@@ -5,7 +5,10 @@
     padding: 0;
     font-family: "Merriweather", serif;
 }
-
+.logo{
+    margin-left: -30rem;
+    margin-top: 10px;
+}
 nav {
     color: white; 
     background-color: #333; 
@@ -30,7 +33,7 @@ nav a {
 }
 
 .sidebar {
-    height: 60px;
+    height: 80px;
     width: 250px;
     margin-left: 80px;
     text-decoration: none;
