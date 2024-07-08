@@ -1,7 +1,68 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
+    font-family: "Merriweather", serif;
 }
+
+nav {
+    color: white; 
+    background-color: #333; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; /* Default to row, but we'll change this on smaller screens */
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex; /* Ensure the list is flex to align items horizontally */
+    flex-direction: row; /* Default direction */
+}
+
+nav a {
+    color: white;
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+}
+
+.sidebar {
+    height: 60px;
+    width: 250px;
+    margin-left: 80px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row; /* Keep stacking nav items vertically */
+    }
+    nav ul {
+        display: flex; /* Keep it as flex to maintain flexibility */
+        width: 10%; /* Ensure it takes the full width */
+        align-items: center; /* Center-align the items for a better look */
+    }
+    nav a {
+        padding: 10px; /* Adjust padding for better touch targets */
+        text-align: center; /* Center-align the text */
+    }
+    /* Adjust the sidebar or any other elements as needed for small screens */
+    .sidebar {
+        width: 100%; /* Full width for smaller screens */
+        height: 50px; /* Adjust height automatically */
+        margin: 0; /* Adjust margin as needed */
+    }
+
+}
+
 
 /*Login and Signup*/
 
@@ -103,80 +164,3 @@ form p a{
     background-color: hsl(0, 0%, 92%);
     color: #555;
 }
-/* signup page */
-/* style for signup and login */
-body{
-    background-color: rgb(182, 152, 176);
-    
- }
- .signup-box{
-    width: 360px;
-    height: 560px;
-    margin: auto;
-    background-color: rgb(173, 186, 197);
-    border-radius: 3px;
- 
- }
- 
- .login-box{
-    width: 360px;
-    height: 280px;
-    margin: auto;
-    background-color: rgb(173, 186, 197);
-    border-radius: 3px;
- 
- }
- 
- 
- h1{
-     text-align: center;
-     padding-top: 15px;
- }
- h4{
-     text-align: center;
- }
-  form{
-     width: 300px;
-     margin-left: 20px;
-  }   
- 
-  form label{
-     display: flex;
-     margin-top: 20px;
-     font-size: 18px;
-     
-  }
-  form input{
-     width: 100%;
-     padding: 6px;
-     border: none;
-     border: 1px solid rgb(152, 126, 126);
-     border-radius: 6px;
-     outline: none;
-  }
- 
-  input[type="button"]{
-     width: 320px;
-     height: 35px;
-     margin-top: 20px;
-     background-color: #1a8067;
-     border: none;
-     color: white;
-     font-size: 18px;
-  }
- 
-  p{
-     text-align: center;
-     padding-top: 20px;
-     font-size: 15px;
-  }
- 
-  .para-2{
-     text-align: center;
-     color: white;
-     font-size: 15px;
-     margin-top: -10px;
-  }
-  .para-2 a{
-    color: #543c96;
-  }
