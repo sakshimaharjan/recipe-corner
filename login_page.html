@@ -14,9 +14,19 @@
         <form>
             <div class="input-group">
                 
+                <div class="input-field" id="phonefield">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="number" placeholder="Phone Number">
+                </div>
+
+                <div class="input-field" id="addressfield">
+                    <i class="fa-solid fa-address-book"></i>
+                    <input type="text" placeholder="Address">
+                </div>
+
                 <div class="input-field" id="namefield">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Username">
                 </div>
 
                 <div class="input-field">
@@ -28,7 +38,7 @@
                     <i class="fa-solid fa-lock"></i>
                     <input type="password" placeholder="Password">
                 </div>
-                <p><a href="#">Forgot Password?</a></p>
+                <p id="forgot-password"><a href="#">Forgot Password?</a></p>
             </div>
             <div class="btn-field">
                 <button type="button" id="signupbtn">Sign Up</button>
@@ -81,10 +91,19 @@
  let signupbtn = document.getElementById("signupbtn");
  let signinbtn = document.getElementById("signinbtn");
  let namefield = document.getElementById("namefield");
+ let phonefield = document.getElementById("phonefield");
+ let addressfield = document.getElementById("addressfield");
+ let forgotPassword = document.getElementById("forgot-password");
  let title = document.getElementById("title");
 
  signinbtn.onclick = function(){
     namefield.style.maxHeight = "0";
+    namefield.style.display = "hidden";
+    phonefield.style.maxHeight = "0";
+    phonefield.style.display = "hidden";
+    addressfield.style.maxHeight = "0";
+    addressfield.style.display = "hidden";
+    forgotPassword.style.display = "block";
     title.innerHTML = "Log in";
     signupbtn.classList.add("disable");
     signinbtn.classList.remove("disable");
@@ -92,6 +111,12 @@
 
  signupbtn.onclick = function(){
     namefield.style.maxHeight = "60px";
+    namefield.style.display = "visible";
+    phonefield.style.maxHeight = "60px";
+    phonefield.style.display = "visible";
+    addressfield.style.maxHeight = "60px";
+    addressfield.style.display = "visible";
+    forgotPassword.style.display = "none";
     title.innerHTML = "Sign Up";
     signupbtn.classList.remove("disable");
     signinbtn.classList.add("disable");
